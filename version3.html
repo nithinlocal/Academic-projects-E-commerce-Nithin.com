@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+        }
+        header {
+            background-color: #a53a2a;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            margin: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 20px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 20px;
+            background-color: #f5fff0;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+        .product img {
+            max-width: 100px;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+        .product h3 {
+            margin: 0;
+            color: #333;
+        }
+        .product p {
+            margin: 5px 0;
+            color: #666;
+        }
+        .product-actions {
+            margin-top: 10px;
+        }
+        .product-actions button {
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            margin-right: 10px;
+            cursor: pointer;
+            color: #fff;
+            font-size: 14px;
+        }
+        .add-to-cart {
+            background-color: #28a745;
+        }
+        .add-to-cart:hover {
+            background-color: #218838;
+        }
+        .buy-now {
+            background-color: #007bff;
+        }
+        .buy-now:hover {
+            background-color: #0056b3;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+        input, button, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #333;
+            border-radius: 4px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        input[type="submit"] {
+            background-color: #a53a2a;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #333;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        footer {
+            background-color: #a53a2a;
+            color: #fff;
+            text-align: center;
+            padding: 0px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .cart {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .cart h3 {
+            margin-top: 0;
+        }
+        .cart-items {
+            margin-bottom: 15px;
+        }
+        .cart-items p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>LIQUOR MART</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+       <a href="#login">Login/Register</a>
+
+        <a href="#cart">Cart (<span id="cart-count">0</span>)</a>
+    </nav>
+
+    <div class="container">
+        <!-- Home Section -->
+        <div id="home" class="section">
+            <h2>Welcome to Our Website</h2>
+            <p>Discover our amazing products and learn more about us.</p>
+        </div>
+
+        <!-- Products Section -->
+        <div id="products" class="section">
+            <h2>Our Products</h2>
+            
+              <h2> BEER:</h2>
+
+            <div class="BEER">
+                <img src="C:\Users\baswa\Downloads\budwiser 3.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Budwieser Beer</h3>
+                    <p>Budweiser is a filtered beer made with up to 30% rice in addition to hops and barley malt1. It is an adjunct American lager, defined by its crisp, clean flavor with very low levels of malt and bitterness2. The beer’s signature light floral and fruity characteristics, intense carbonation and a sweet rice-like aftertaste pair perfectly with salty bar snacks and fried foods, while its light body makes for unmatched drinkability</p>
+<p>price:250rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+            
+
+
+
+
+ <h2> BEER:</h2>
+
+            <div class="BEER">
+                <img src="C:\Users\baswa\Downloads\heincken 2.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Heincken Beer</h3>
+                    <p>Heineken Lager Beer (Dutch: Heineken Pilsener), or simply Heineken (pronounced [ˈɦɛinəkə(n)]), is a Dutch pale lager beer with 5% alcohol by volume produced by the Dutch brewing company Heineken N.V. Heineken beer is sold in a green bottle with a red star</p>
+<p>price:180rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+ <h2> BEER: </h2>
+
+            <div class="BEER">
+                <img src="C:\Users\baswa\Downloads\kf 1.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Kingfisher Beer</h3>
+                    <p>Kingfisher is an Indian beer brewed by United Breweries Group, Bangalore12. The brand was first introduced in 1857 and then relaunched in 1978 by Vijay Mallya1. With a market share of over 36% in India, it is also available in 52 other countries as of 2013</p>
+<p>price:150rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+ <h2> BEER: </h2>
+
+            <div class="BEER">
+                <img src=" C:\Users\baswa\Downloads\knock ou 2.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Knock out Beer</h3>
+                    <p>knock out is one of the strongest beers in India as it serves high alcohol content. It is a sparkling wine cooler offering a refreshing taste and is perfect for any occasion, or no occasion, or just for chill. It comes in various variants. </p>
+<p>price:250rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+ <h2>VODKA: </h2>
+
+            <div class="VODKA">
+                <img src="C:\Users\baswa\Downloads\mm.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Magic Moments</h3>
+                    <p>Magic Moments grain Vodka is conceived from the finest grains with a distinct grade of unlimited purity that adds the spark of magic to life. magic moments has a smooth and perfect blend of teasing ingredients giving an enriched taste.It has a clean and fresh taste with subtle aroma of neutral grain spirit and neutral taste.</p>
+<p>price:750rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+ <h2> VODKA: </h2>
+
+            <div class="VODKA.">
+                <img src="C:\Users\baswa\Downloads\fly vodka.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Fly Vodka</h3>
+                    <p>Fly Vodka. Made with Alpine water FLY Vodka is filtered with platinum after distillation, for a finer texture. It'll work nicely in an array of cocktails, or simply sipped over ice.</p>
+<p>price:3285rsrs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+ <h2> VODKA: </h2>
+
+            <div class="VODKA">
+                <img src="C:\Users\baswa\Downloads\great gose vdka.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Great Goose Vodka</h3>
+                    <p>Expressed in GREY GOOSE® bottle is the essence of the finest ingredients from France: soft winter wheat from in and around Picardie plus pure spring water from Gensac in the Cognac region, nurtured and captured from field to bottle in an exclusive process designed and controlled by the extraordinary skills and commitment of our Cellar Master François Thibault.</p>
+<p>price:11790rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+ <h2> VODKA:</h2>
+
+            <div class="VODKA">
+                <img src="C:\Users\baswa\Downloads\whitemishief.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Whitemeshief Vodka</h3>
+                    <p>White Mischief vodka is India's best selling vodka with about 48% market share in the regular vodka segment. It appeals to the youth and is positioned as a young, fun and flirty brand.</p>
+<p>price:340rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+ <h2> WHISKEY: </h2>
+
+            <div class="WHISKEY">
+                <img src="C:\Users\baswa\Downloads\amrut whiskey.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Amrut Whiskey</h3>
+                    <p>Amrut is a brand of Indian single malt whisky, manufactured by Amrut Distilleries. It is the first single malt whisky to be made in India. The name "Amrut" translates to "Elixir of Life" in Sanskrit12. The whisky is produced using a process that involves malted barley and water from the Himalayan Mountains, and it has its own distinct flavor3. The Amrut Fusion expression was voted the 3rd Best Whisky in the World by Jim Murray in 2010</p>
+<p>price:9900rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+ <h2> WHISKEY: </h2>
+
+            <div class="WHISKEY">
+                <img src="C:\Users\baswa\Downloads\imperial blue.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Imperial Blue</h3>
+                    <p>mperial Blue, abbreviated to IB and also known as Seagram's Imperial Blue, is a brand of Indian whisky, owned by Pernod Ricard, and launched in 1997. It is a blend of Indian grain spirits with imported Scotch malts. It is commonly available in 750ml, 375ml and 180ml bottles, and also available in 90ml bottles</p>
+<p>price:880rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+ <h2> WHISKEY:</h2>
+
+            <div class="WHISKEY">
+                <img src="C:\Users\baswa\Downloads\royal stag.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Royal Stag</h3>
+                    <p>Royal Stag, also known as Seagram's Royal Stag, is an Indian whisky launched in 1995. It is available in many countries across the world in various pack sizes. It is Pernod Ricard's best selling brand by volume. It is a blend of grain spirits and imported Scotch malts.</p>
+<p>price:999rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+ <h2> WHISKEY: </h2>
+
+            <div class="WHISKEY.">
+                <img src="C:\Users\baswa\Downloads\dewars whisky.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Devars Whiskey</h3>
+                    <p>Dewar’s Scotch Whisky is a blend of 40 of Scotland’s finest single malts and grain whiskies. Dewar’s 12 and above are a result of a time-honored process. The blend is married in vintage oak casks then harmonized to perfection. Aberfeldy Single Malt is at the heart of all the Dewar’s blends.</p>
+<p>price:3000rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+ <h2> WINE: </h2>
+
+            <div class="WINE">
+                <img src="C:\Users\baswa\Downloads\york arros.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>York Arros Wine</h3>
+                    <p>Arros is a reserve blend of Shiraz & Cabernet Sauvignon. This flagship wine of York Winery is composed of the best barrels from the best vintages making its production very limited to less than 10,000 bottles.</p>
+<p>price:1500rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <h2>WINE:</h2>
+
+            <div class="WINE">
+                <img src="C:\Users\baswa\Downloads\sula brut.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Sula-Brut Wine</h3>
+                    <p>Fruit-forward and refreshing, complex yet easy-drinking, this sparkling wine will enchant you with its pear and apple aromas, its crispiness and its wonderful finish.
+
+This sparkling white wine has been made with the most ultimate respect for the environment, following strict sustainable practices.
+Come discover our beautiful vineyard, our Tasting Room and our gorgeous boutique hotel The Source, in the rolling hills of the Nashik valley.</p>
+<p>price:800rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+ <h2> WINE:</h2>
+
+            <div class="WINE">
+                <img src="C:\Users\baswa\Downloads\myra.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Myra Wine</h3>
+                    <p>The brand is currently producing wines through contract farming with vineyards at two locations: Dindori at Nashik in Maharashtra and at Bijapur in Karnataka. It is producing wines as per the market demand for its products, which are more than 1 lakh litres.</p>
+<p>price:1800rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+ <h2> WINE: </h2>
+
+            <div class="WINE">
+                <img src="C:\Users\baswa\Downloads\j noon white.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>J'Noon White Wine</h3>
+                    <p>J'NOON White Variety: Chardonnay & Sauvignon Blanc Combines green apple, white pear, and stone fruit flavors of Chardonnay with fresh, vibrant lime, lemongrass, white pepper, jasmine, and herbaceous fruit flavors of Sauvignon Blanc. This white wine places our palate between Pouilly-Fuisse and the white wines of the Northern Rhône Valley.</p>
+<p>price:2000rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+ <h2>RUM:  </h2>
+
+            <div class="RUM">
+                <img src="C:\Users\baswa\Downloads\bacardi rum.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Bacardi Rum</h3>
+                    <p>Bacardi rum is made from molasses, yeast, and water. The molasses is diluted and fermented using Bacardi’s unique strain of yeast</p>
+<p>price:1045rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+<h2> RUM:</h2>
+
+            <div class="RUM">
+                <img src="C:\Users\baswa\Downloads\ROCKPAPER RUM.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Rock Paper Rum</h3>
+                    <p>ade with locally sourced sugarcane and artfully blended with rare botanicals, this rum is made in small batches. It is sporty and bold, playful and punchy, with a sense of being premium yet affordable.
+
+Rock Paper rum is currently available in retail stores in Mumbai, Thane, Pune and Goa.
+
+The Indian Spiced Rum (Rs 1,500 for 750 ml, bottled at 42.8% ABV) is an original recipe of elegantly spiced nuances that goes down smooth on the rocks or spicing up dark liquor cocktails.</p>
+<p>price:1500rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+<h2>  RUM:</h2>
+
+            <div class="RUM">
+                <img src="C:\Users\baswa\Downloads\havana club run.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Havana Club Rum</h3>
+                    <p>Havana Club is a brand of rum created in Cuba in 19341. The brand's rum is made with sugarcane grown in the Caribbean and is aged in oak barrels for a smooth and distinct flavor23. Havana Club's rum is a key ingredient in many popular cocktails, including the Mojito, Daiquiri, and Cuba Libre2. The brand was nationalized after the Cuban Revolution of 19591. Today, Havana Club is produced by Cuba Ron S.A.</p>
+<p>price:1000rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+<h2> RUM: </h2>
+
+            <div class="RUM">
+                <img src="C:\Users\baswa\Downloads\caribba negro rum.jpg" style="width:50%;height:50%;  alt="Product Image">
+                <div>
+                    <h3>Caribba Negro Dark Rum</h3>
+                    <p>Caribba Negro is authentic spicy Caribbea rum. Fruits and caramel nuance add sweetness, but the aftertaste is pleasantly sweet-bitterish. Aroma has slightly smoky nuance.</p>
+<p>price:600rs</p>
+                    
+                        <button class="add-to-cart" onclick="addToCart('Product 1')">Add to Cart</button>
+                        <button class="buy-now" onclick="buyNow('Product 1')">Buy Now</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+
+
+
+            <!-- Add more products as needed -->
+        </div>
+
+        <!-- About Us Section -->
+        <div id="about" class="section">
+            <h2>About Us</h2>
+            <p>ABOUT LIQUOR MART:</p>
+<p>We take our stories, readers and drinking, well, very seriously. All of our articles and recipes are carefully chosen by our editorial team. Liquor.com does not accept payment or any form of kickback for anything we write about. No one can pay to be featured in an article written by Liquor.com. That’s what advertising is for.
+
+Liquor.com occasionally sends out emails featuring products or offerings from our sponsors; when paid for, these emails will always be explicitly labeled as “Partner Tip” or “Sponsored.” Likewise, social media content provided by our sponsors is designated by either “(sponsored)” for Facebook or “(sp)” for Twitter. These sponsored emails and posts are one of the ways we keep the lights on around here. They’re how we keep those regular high-quality editorial stories coming.
+
+We would never sell, loan or share our subscriber list, not for any amount of money. Your information is safe with us. Thankyou for visiting ourpage</p>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contact" class="section">
+            <h2>Contact Us</h2>
+            <div class="form-container">
+                <h3>Contact Form</h3>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <input type="submit" value="Send">
+                    <div id="form-error" class="error"></div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Cart Section -->
+        <div id="cart" class="cart">
+            <h3>Your Cart</h3>
+            <div id="cart-items" class="cart-items">
+                <p>No items in cart.</p>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        
+<!-- Login/Registration Section -->
+        <div id="login" class="section">
+            <div id="login-form">
+                <h2>Login</h2>
+                <form action="/login" method="post">
+                    <label for="login-username">Username:</label>
+                    <input type="text" id="login-username" name="username" required>
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" required>
+                    <input type="submit" value="Login">
+                </form>
+                <div class="toggle-link">
+                    <a href="#" onclick="showRegister()">Don't have an account? Register here</a>
+                </div>
+            </div>
+
+            <div id="register-form" style="display: none;">
+                <h2>Register</h2>
+                <form id="registration-form" action="/register" method="post">
+                    <label for="register-username">Username:</label>
+                    <input type="text" id="register-username" name="username" required>
+                    <label for="register-email">Email:</label>
+                    <input type="email" id="register-email" name="email" required>
+                    <label for="register-password">Password:</label>
+                    <input type="password" id="register-password" name="password" required>
+                    <label for="register-confirm-password">Confirm Password:</label>
+                    <input type="password" id="register-confirm-password" name="confirm-password" required>
+                    <input type="submit" value="Register">
+                </form>
+                <div class="toggle-link">
+                    <a href="#" onclick="showLogin()">Already have an account? Login here</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <footer>
+        <p>&copy;presented by liquor cart. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function showLogin() {
+            document.getElementById('login-form').style.display = 'block';
+            document.getElementById('register-form').style.display = 'none';
+        }
+
+        function showRegister() {
+            document.getElementById('login-form').style.display = 'none';
+            document.getElementById('register-form').style.display = 'block';
+        }
+
+        // Client-side validation for the contact form
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const errorDiv = document.getElementById('form-error');
+            errorDiv.textContent = '';
+
+            if (!name || !email || !message) {
+                errorDiv.textContent = 'All fields are required.';
+                event.preventDefault();
+            } else if (!validateEmail(email)) {
+                errorDiv.textContent = 'Invalid email address.';
+                event.preventDefault();
+            }
+        });
+
+        function validateEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+
+        // JavaScript for Add to Cart and Buy Now
+        let cart = [];
+
+        function addToCart(product) {
+            cart.push(product);
+            updateCartInfo();
+        }
+
+        function buyNow(product) {
+            alert(`Proceeding to buy ${product}`);
+            // Add logic to handle immediate purchase
+        }
+
+        function updateCartInfo() {
+            const cartCount = document.getElementById('cart-count');
+            const cartItems = document.getElementById('cart-items');
+            
+            cartCount.textContent = cart.length;
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<p>No items in cart.</p>';
+            } else {
+                cartItems.innerHTML = cart.map(item => `<p>${item}</p>`).join('');
+            }
+        }
+    </script>
+</body>
+</html>
